@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetectorTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-FF-ozb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Oe5-HL-0J1"/>
+                                    <constraint firstAttribute="height" constant="600" id="frp-YJ-MLS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YP-ao-xqV">
+                                <rect key="frame" x="20" y="550" width="130" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.53914543157573291" blue="0.85751323398652257" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="O0W-vC-xss"/>
+                                    <constraint firstAttribute="height" constant="30" id="ycZ-LJ-wlb"/>
+                                </constraints>
+                                <state key="normal" title="Face Detect"/>
+                                <connections>
+                                    <action selector="faceDetectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81w-lQ-qjb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yiZ-FF-ozb" secondAttribute="bottom" id="415-yB-Ph7"/>
+                            <constraint firstItem="8YP-ao-xqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5XN-6X-uuR"/>
+                            <constraint firstItem="yiZ-FF-ozb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7y4-L8-Dni"/>
+                            <constraint firstAttribute="trailing" secondItem="yiZ-FF-ozb" secondAttribute="trailing" id="Q1b-C3-VSH"/>
+                            <constraint firstItem="yiZ-FF-ozb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RuO-Gs-fu5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8YP-ao-xqV" secondAttribute="bottom" constant="20" id="bFO-jY-hJA"/>
+                            <constraint firstAttribute="trailing" secondItem="8YP-ao-xqV" secondAttribute="trailing" constant="450" id="toW-ow-o8g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceButton" destination="8YP-ao-xqV" id="zuH-jI-8rc"/>
+                        <outlet property="imageView" destination="yiZ-FF-ozb" id="p7z-ez-Tjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="400"/>
+        </scene>
+    </scenes>
+</document>
